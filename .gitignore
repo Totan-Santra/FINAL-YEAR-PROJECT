@@ -1,115 +1,27 @@
-
-# ==============================
 # Python
-# ==============================
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-
-# ==============================
-# Virtual Environments
-# ==============================
-venv/
+*.pyc
 .venv/
-env/
-ENV/
-.conda/
 
-# ==============================
-# Environment Variables / Secrets
-# ==============================
+# Secrets
 .env
-.env.*
-!.env.example
-*.pem
-*.key
-secrets/
-credentials.json
 
-# ==============================
-# IDE / Editor
-# ==============================
-.vscode/
-.idea/
-*.swp
-*.swo
-.DS_Store
-
-# ==============================
-# Jupyter Notebook
-# ==============================
-.ipynb_checkpoints/
-
-# ==============================
-# Logs
-# ==============================
-*.log
-logs/
-
-# ==============================
-# Testing / Coverage
-# ==============================
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-.nox/
-
-# ==============================
-# Build / Distribution
-# ==============================
-build/
-dist/
-*.egg-info/
-.eggs/
-
-# ==============================
-# ML / AI Artifacts
-# ==============================
-models/
-checkpoints/
-*.pt
-*.pth
-*.onnx
-*.h5
-*.keras
-*.pkl
-*.joblib
-
-# ==============================
-# Vector Databases
-# ==============================
-chroma_db/
-chroma/
-vector_store/
-faiss_index/
-
-# ==============================
-# Database Files
-# ==============================
+# Database
 *.db
-*.sqlite
-*.sqlite3
+*.db-shm
+*.db-wal
 
-# ==============================
-# Cache / Temporary Files
-# ==============================
-.cache/
-tmp/
-temp/
-*.tmp
-*.bak
+# Audio
+*.wav
 
-# ==============================
-# Package Managers
-# ==============================
-pip-wheel-metadata/
-poetry.lock.tmp
+# ML Models
+*.onnx
+*.onnx.data
+*.pth
+*.pt
 
-# ==============================
-# OS Files
-# ==============================
-Thumbs.db
+# Vector Database
+Rocket_chorma/
+
+# macOS
 .DS_Store
