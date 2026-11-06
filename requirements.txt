@@ -1,0 +1,44 @@
+# Agent
+langchain
+langchain-core
+langgraph
+langchain-ollama
+langgraph-checkpoint-sqlite
+
+# MCP
+mcp
+
+# Configuration
+pydantic
+pydantic-settings
+python-dotenv
+rich
+platformdirs
+psutil
+
+# Web
+httpx
+ddgs
+beautifulsoup4
+trafilatura
+
+# Voice
+faster-whisper
+sounddevice
+numpy
+openwakeword
+piper-tts
+
+# Google integrations
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+
+# Developer tools
+PyGithub
+
+# Testing
+tenacity
+pytest
+pytest-asyncio
