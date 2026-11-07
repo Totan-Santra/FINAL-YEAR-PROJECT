@@ -1,27 +1,88 @@
+# ==============================
 # Python
+# ==============================
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.so
+*.egg-info/
+dist/
+build/
+
+# ==============================
+# Virtual Environments
+# ==============================
 .venv/
+venv/
+env/
 
-# Secrets
+# ==============================
+# Environment & Secrets
+# ==============================
 .env
+.env.*
+!.env.example
+credentials.json
+token.json
+*.pem
+*.key
 
-# Database
+# ==============================
+# Databases & Local Memory
+# ==============================
 *.db
+*.sqlite
+*.sqlite3
 *.db-shm
 *.db-wal
+*.sqlite-shm
+*.sqlite-wal
 
-# Audio
-*.wav
-
-# ML Models
-*.onnx
-*.onnx.data
-*.pth
-*.pt
-
+# ==============================
 # Vector Database
-Marvin_chorma/
+# ==============================
+Marvin_chroma/
+chroma_db/
+vector_db/
 
-# macOS
+# ==============================
+# Workspace & User Data
+# ==============================
+workspace/
+data/
+notes.txt
+*.log
+
+# ==============================
+# Audio & Voice Files
+# ==============================
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.flac
+*.onnx
+*.tflite
+
+# ==============================
+# Jupyter Notebook
+# ==============================
+.ipynb_checkpoints/
+
+# ==============================
+# IDE & Editors
+# ==============================
+.vscode/
+.idea/
+*.swp
+*.swo
 .DS_Store
+
+# ==============================
+# Testing & Coverage
+# ==============================
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
