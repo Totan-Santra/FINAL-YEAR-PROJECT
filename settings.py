@@ -11,6 +11,8 @@ MAX_MESSAGES = 20
 DATA = ROOT / "data"
 DATA.mkdir(exist_ok=True)
 
+
+WORKSPACE = DATA / "workspace"
 NOTES_FILE = DATA / "Note.txt"
 DB_FILE = DATA / "Marvin_database.db"
 CHROMA_DIR = DATA / "Marvin_chroma"

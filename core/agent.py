@@ -3,6 +3,10 @@ from typing import Annotated, TypedDict
 from groq import BadRequestError
 from tools.weather import WEATHER_TOOLS
 
+from tools.files import FILE_TOOLS 
+from tools.system import SYSTEM_TOOLS 
+from tools.apps import APP_TOOLS
+
 from langchain_core.messages import AIMessage, AnyMessage, SystemMessage, trim_messages
 from langchain_groq import ChatGroq
 from langgraph.checkpoint.sqlite import SqliteSaver
@@ -16,7 +20,7 @@ from tools.google import GOOGLE_TOOLS
 from tools.memory_web import MEMORY_WEB_TOOLS
 from tools.notes import NOTES_TOOLS, get_time, read_notes, save_note
 
-TOOLS = NOTES_TOOLS + MEMORY_WEB_TOOLS + GOOGLE_TOOLS + WEATHER_TOOLS
+TOOLS = NOTES_TOOLS + MEMORY_WEB_TOOLS + GOOGLE_TOOLS + WEATHER_TOOLS + FILE_TOOLS + SYSTEM_TOOLS + APP_TOOLS
 LLM_TOOLS = ChatGroq(model=MODEL).bind_tools(TOOLS)
 
 SYSTEM_PROMPT = SystemMessage(content=(
