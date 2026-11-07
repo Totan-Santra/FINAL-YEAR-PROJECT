@@ -21,7 +21,7 @@ __pycache__/
 *.pt
 
 # Vector Database
-Rocket_chorma/
+Marvin_chorma/
 
 # macOS
 .DS_Store
