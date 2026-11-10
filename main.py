@@ -4,7 +4,7 @@ from core.agent import ask
 from settings import ASSISTANT_NAME
 from voice.audio import listen, speak, voice_confirm, wait_for_wake
 
-THREAD = "jarvis"
+THREAD = "Marvin"
 EXIT_WORDS = ("goodbye", "stop listening", "exit", "quit")
 
 
@@ -19,7 +19,7 @@ def safe_ask(text, confirm=None):
 
 
 def voice_loop():
-    print(f"{ASSISTANT_NAME} is ready. Say 'hey jarvis'. Say 'goodbye' or press Ctrl+C to quit.")
+    print(f"{ASSISTANT_NAME} is ready. Say 'hey marvin'. Say 'goodbye' or press Ctrl+C to quit.")
     while True:
         wait_for_wake()
         speak("Yes?")
