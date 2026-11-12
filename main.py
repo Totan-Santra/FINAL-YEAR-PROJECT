@@ -1,5 +1,7 @@
 import sys
 
+sys.stdout.reconfigure(encoding="utf-8")
+
 from core.agent import ask
 from settings import ASSISTANT_NAME
 from voice.audio import listen, speak, voice_confirm, wait_for_wake

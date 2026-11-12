@@ -2,6 +2,8 @@ import io
 import subprocess
 import wave
 from pathlib import Path
+import os
+import platform
 
 import openwakeword
 import sounddevice as sd
@@ -31,7 +33,18 @@ def _wake_model():
 
 
 def speak(text: str):
-    subprocess.run(["say", text])
+    system = platform.system()
+    if system == "Darwin":
+        subprocess.run(["say", text])
+    elif system == "Windows":
+        script = (
+            "Add-Type -AssemblyName System.Speech; "
+            "(New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak($env:MARVIN_TEXT)"
+        )
+        subprocess.run(
+            ["powershell", "-NoProfile", "-Command", script],
+            env={**os.environ, "MARVIN_TEXT": text},
+        )
 
 
 def listen(seconds: int = 5) -> str:
