@@ -402,7 +402,6 @@ Habits that prevent most problems:
 
 ## Authors
 
-- **Debajyoti**
 - **Totan Santra**
 - **Sayan Mete**
 
