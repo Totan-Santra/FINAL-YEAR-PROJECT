@@ -405,6 +405,6 @@ Habits that prevent most problems:
 - **Totan Santra**
 - **Sayan Mete**
 
-Final Year Project, Bachelor of Computer Applications.
+Final Year Project
 
 Repository: https://github.com/Totan-Santra/FINAL-YEAR-PROJECT
