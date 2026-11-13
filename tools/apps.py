@@ -48,7 +48,7 @@ def open_app(app_name: str) -> str:
             if not app:
                 return "Application not supported on Windows."
 
-            subprocess.Popen([app], shell=False)
+            subprocess.Popen(["cmd", "/c", "start", "", app])
 
         else:
             return "Unsupported operating system."

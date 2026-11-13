@@ -41,7 +41,7 @@ def _is_private(host: str) -> bool:
         pass
     return False
 
-tool
+@tool
 def open_website(url: str) -> str:
     """Open a website in the user's default browser. Accepts a full link or a bare domain."""
     try:

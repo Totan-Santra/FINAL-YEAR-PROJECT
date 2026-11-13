@@ -1,3 +1,4 @@
+import os
 import psutil
 import platform
 from langchain_core.tools import tool
@@ -10,12 +11,7 @@ def system_info()->str:
         os_name = platform.system()
         memory = psutil.virtual_memory()
         
-        disk = psutil.disk_usage(
-            str(psutil.disk_partitions()[0].mountpoint)
-
-            if os_name == "windows"
-            else "/"
-        )
+        disk = psutil.disk_usage(os.path.abspath(os.sep))
         
         cpu = psutil.cpu_percent(interval=1)
         
