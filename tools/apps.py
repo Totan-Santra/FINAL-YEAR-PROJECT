@@ -12,6 +12,9 @@ def open_app(app_name: str) -> str:
             "safari": "Safari",
             "chrome": "Google Chrome",
             "vscode": "Visual Studio Code",
+            "visualstudiocode": "Visual Studio Code",
+            "code": "Visual Studio Code",
+            "googlechrome": "Google Chrome",
             "calculator": "Calculator",
             "terminal": "Terminal",
             "notes": "Notes",
@@ -21,6 +24,9 @@ def open_app(app_name: str) -> str:
         "windows": {
             "chrome": "chrome",
             "vscode": "code",
+            "visualstudiocode": "code",
+            "code": "code",
+            "googlechrome": "chrome",
             "calculator": "calc.exe",
             "terminal": "wt.exe",
             "notepad": "notepad.exe",
@@ -29,12 +35,13 @@ def open_app(app_name: str) -> str:
     }
 
     os_name = platform.system()
+    key = "".join(c for c in app_name.lower() if c.isalnum())
 
     try:
 
         if os_name == "Darwin":
 
-            app = apps["mac"].get(app_name.lower().strip())
+            app = apps["mac"].get(key)
 
             if not app:
                 return "Application not supported on macOS."
@@ -43,7 +50,7 @@ def open_app(app_name: str) -> str:
 
         elif os_name == "Windows":
 
-            app = apps["windows"].get(app_name.lower().strip())
+            app = apps["windows"].get(key)
 
             if not app:
                 return "Application not supported on Windows."
