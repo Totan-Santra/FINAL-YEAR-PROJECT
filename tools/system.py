@@ -1,6 +1,6 @@
 import psutil
 import platform
-from langchain.tools import tool
+from langchain_core.tools import tool
 
 @tool 
 def system_info()->str:
