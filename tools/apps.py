@@ -18,7 +18,8 @@ def open_app(app_name: str) -> str:
             "calculator": "Calculator",
             "terminal": "Terminal",
             "notes": "Notes",
-            "finder": "Finder"
+            "finder": "Finder" ,
+            "brave": "Brave Browser",
         },
 
         "windows": {
@@ -30,8 +31,9 @@ def open_app(app_name: str) -> str:
             "calculator": "calc.exe",
             "terminal": "wt.exe",
             "notepad": "notepad.exe",
-            "explorer": "explorer.exe"
-        }
+            "explorer": "explorer.exe",
+            "brave": "brave.exe",
+    }
     }
 
     os_name = platform.system()
@@ -46,7 +48,10 @@ def open_app(app_name: str) -> str:
             if not app:
                 return "Application not supported on macOS."
 
-            subprocess.Popen(["open", "-a", app])
+            result = subprocess.run(["open", "-a", app], capture_output=True)
+
+            if result.returncode != 0:
+                return f"{app_name} is not installed."
 
         elif os_name == "Windows":
 
