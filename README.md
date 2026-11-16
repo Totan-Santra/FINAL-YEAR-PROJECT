@@ -54,14 +54,52 @@ FINAL-YEAR-PROJECT/
 
 ## Setup
 
-### 1. Clone the repository
+### 1. Install the requirements
+
+You need **Git**, **Python** (the version in the `.python-version` file) and **uv**.
+
+#### Windows
+
+1. Install Git from https://git-scm.com/download/win
+2. Install Python from https://www.python.org/downloads/ (tick **"Add Python to PATH"** during setup).
+3. Open **PowerShell** and install uv:
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+4. Close and reopen PowerShell.
+
+#### macOS
+
+1. Open **Terminal** and install Homebrew (skip if you already have it) from https://brew.sh
+2. Install the tools:
+
+```bash
+brew install git python uv
+```
+
+### 2. Download the project
+
+**Option A: Clone with Git (recommended)**
+
+Windows (PowerShell) and macOS (Terminal):
 
 ```bash
 git clone https://github.com/Totan-Santra/FINAL-YEAR-PROJECT.git
 cd FINAL-YEAR-PROJECT
 ```
 
-### 2. Install dependencies
+**Option B: Download as ZIP (no Git needed)**
+
+1. Open https://github.com/Totan-Santra/FINAL-YEAR-PROJECT
+2. Click the green **Code** button, then **Download ZIP**.
+3. Extract the ZIP.
+4. Open PowerShell (Windows) or Terminal (macOS) inside the extracted folder:
+   - Windows: open the folder, click the address bar, type `powershell` and press Enter.
+   - macOS: right-click the folder and choose **New Terminal at Folder**.
+
+### 3. Install dependencies
 
 ```bash
 uv sync
@@ -73,7 +111,12 @@ or with pip:
 pip install -r requirements.txt
 ```
 
-### 3. Add your API keys
+**Voice mode notes**
+
+- **Windows:** allow microphone access in Settings, then Privacy & security, then Microphone. If a package fails to build, install "Microsoft C++ Build Tools".
+- **macOS:** allow microphone access for Terminal in System Settings, then Privacy & Security, then Microphone. If an audio package fails to install, run `brew install portaudio` and try again.
+
+### 4. Add your API keys
 
 Create a `.env` file in the project root:
 
@@ -81,7 +124,7 @@ Create a `.env` file in the project root:
 GROQ_API_KEY=your_groq_api_key
 ```
 
-### 4. Set up Google access (for Gmail and Calendar)
+### 5. Set up Google access (for Gmail and Calendar)
 
 1. Create a project in Google Cloud Console and enable the **Gmail API** and **Google Calendar API**.
 2. Create OAuth credentials (Desktop app) and download them as `credentials.json`.
