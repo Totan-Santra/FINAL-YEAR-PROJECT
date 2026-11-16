@@ -169,4 +169,4 @@ Old conversation history is saved in `data/Marvin_database.db`. If a wrong reply
 
 ## Acknowledgements
 
-Built with LangGraph, LangChain, Groq, ChromaDB and the Google APIs.
+Built with LangGraph, LangChain, Groq, ChromaDB and the Google APIs..
